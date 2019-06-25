@@ -1,8 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import "../Css/App.css";
+import "../Css/Home.css";
 import ComputerIcon from "../Resources/programming (4).svg";
 import { HashLink as Link } from "react-router-hash-link";
+import Github from "../Resources/Github.png";
+import LinkedIn from "../Resources/LinkedIn.png";
+import Resume from "../Resources/Resume.png";
+import Email from "../Resources/Email.png";
 
 class Home extends React.Component {
   constructor(props) {
@@ -68,23 +72,31 @@ class Home extends React.Component {
           <Route exact path="/Portfolio/:PortfolioUuid" component={ () => alert("LER") } />
         </div>
         <div className="Home">
-          <div className="Title">
-            {!this.state.smallScreen &&
-              <div className="Title-Image">
-                <img src={ComputerIcon} alt="Logo" />
-              </div>
-            }
-            <div className="Title-Text">
-              <p className="Title-Text-Blue">type </p><p className="Title-Text-Green">Software_Engineer </p><p className="Title-Text-Blue">struct </p><p>{`{`}</p><br/>
-              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Name: </p><p className="Title-Text-Yellow">{"\"Alistair Fink\""}</p><p>,</p><br/>
-              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Location: </p><p className="Title-Text-Yellow">{"\"Toronto, Canada\""}</p><p>,</p><br/>
-              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Skill_Set: []</p><p className="Title-Text-Blue">{"string"}</p><p> {`{`}</p><br/>
-              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p className="Title-Text-Yellow">{"\"Full Stack Engineer\""}</p><p>,</p><br/>
-              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p className="Title-Text-Yellow">{"\"Android Developer\""}</p><p>,</p><br/>
-              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p className="Title-Text-Yellow">{"\"Go Developer\""}</p><p>,</p><br/>
-              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>{`}`}</p><br/>
-              <p>{`}`}</p><p className="Title-Blinking-Cursor"></p>
-            </div>
+        	<div>
+        		<div className="Logos">
+        			<a className="LogoLink" href="https://github.com/alistairfink"><img src={Github}/></a>
+        			<a className="LogoLink" href="https://www.linkedin.com/in/alistairfink/"><img src={LinkedIn}/></a>
+        			<a className="LogoLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing"><img src={Resume}/></a>
+        			<a className="LogoLink" href="mailto:alistairfink@gmail.com"><img src={Email}/></a>
+        		</div>
+	          <div className="Title">
+	            {!this.state.smallScreen &&
+	              <div className="Title-Image">
+	                <img src={ComputerIcon} />
+	              </div>
+	            }
+	            <div className="Title-Text">
+	              <p className="Title-Text-Blue">type </p><p className="Title-Text-Green">Software_Engineer </p><p className="Title-Text-Blue">struct </p><p>{`{`}</p><br/>
+	              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Name: </p><p className="Title-Text-Yellow">{"\"Alistair Fink\""}</p><p>,</p><br/>
+	              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Location: </p><p className="Title-Text-Yellow">{"\"Toronto, Canada\""}</p><p>,</p><br/>
+	              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Skill_Set: []</p><p className="Title-Text-Blue">{"string"}</p><p> {`{`}</p><br/>
+	              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p className="Title-Text-Yellow">{"\"Full Stack Engineer\""}</p><p>,</p><br/>
+	              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p className="Title-Text-Yellow">{"\"Android Developer\""}</p><p>,</p><br/>
+	              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p className="Title-Text-Yellow">{"\"Go Developer\""}</p><p>,</p><br/>
+	              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>{`}`}</p><br/>
+	              <p>{`}`}</p><p className="Title-Blinking-Cursor"></p>
+	            </div>
+	          </div>
           </div>
           <div className={`${this.state.headerClass} Header`} ref="header">
             <Link className="Heading-Link" smooth to="#about">
@@ -108,7 +120,7 @@ class Home extends React.Component {
               </div>
             </Link>
           </div>
-          <div id="about" style={{height: '700px', paddingTop: '10vh'}}>
+          <div id="about" >
             <h1>About</h1>
           </div>
           <div id="projects" style={{height: '700px', paddingTop: '10vh'}}>

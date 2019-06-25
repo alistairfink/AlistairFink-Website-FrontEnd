@@ -10,6 +10,8 @@ h1, h2, h3, h3, p {
   padding: 0px;
   margin: 0px;
 }
+
+
 .Home {
   width: 100%;
   height: 10000px;
@@ -110,8 +112,35 @@ h1, h2, h3, h3, p {
   color: white;
 }
 
+.Logos {
+  display: flex;
+  background-color: var(--header-top-colour);
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 5vh;
+  padding-right: 20px;
+  padding-bottom: 0px;
+}
+
+.LogoLink {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+
+.LogoLink:hover {
+  filter: brightness(0.6);
+}
+
+.LogoLink > img {
+  height: 4vh;
+  margin-right: 15px;
+  margin-bottom: 0px;
+}
+
 .Title {
-  height: 90vh;
+  height: 85vh;
   background-color: var(--header-top-colour);
   display: flex;
   flex-direction: row;
@@ -160,12 +189,7 @@ h1, h2, h3, h3, p {
   display: inline-block;
   font-family: Monaco, Arial, Helvetica, sans-serif;
   line-height: 24px;
-  font-size: 24px;
-  color: white;
   min-width: 360px;
-}
-
-.Title-Blinking-Cursor {
   font-weight: 100;
   font-size: 2.5rem;
   color: white;

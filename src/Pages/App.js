@@ -7,8 +7,7 @@ class App extends React.Component {
     return (
       <Router onUpdate={this.hashLinkScroll}>
         <div>
-          <Redirect from="/" to="/Home" />
-          <Route exact path="/Home" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/Portfolio" component={ () => alert("LER") } />
           <Route exact path="/Portfolio/:PortfolioUuid" component={ () => alert("LER") } />
         </div>
