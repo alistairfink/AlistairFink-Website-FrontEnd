@@ -8,9 +8,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       scrolled: false,
-      headerClass: "HeaderTopFirstLoad"
+      headerClass: "HeaderTopFirstLoad",
+      smallScreen: false,
     };
 
+    this.smallScreen = this.smallScreen.bind(this);
   }
 
   listenScrollEvent = e => {
@@ -26,12 +28,22 @@ class App extends React.Component {
     }
   }
 
+  smallScreen() {
+    console.log(window.innerWidth < 1200)
+    if(window.innerWidth < 1200){
+      this.setState({smallScreen: true})
+    } else {
+      this.setState({smallScreen: false})
+    }
+  }
+
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent)
+    this.smallScreen()
   }
 
   componentWillUnmount() {
-      window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('scroll', this.onScroll);
   }
 
   render() {
@@ -47,9 +59,11 @@ class App extends React.Component {
         </div>
         <div className="Home">
           <div className="Title">
-            <div className="Title-Image">
-              <img src={ComputerIcon} alt="Logo" />
-            </div>
+            {!this.state.smallScreen &&
+              <div className="Title-Image">
+                <img src={ComputerIcon} alt="Logo" />
+              </div>
+            }
             <div className="Title-Text">
               <p className="Title-Text-Blue">type </p><p className="Title-Text-Green">Software_Engineer </p><p className="Title-Text-Blue">struct </p><p>{`{`}</p><br/>
               <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Name: </p><p className="Title-Text-Yellow">{"\"Alistair Fink\""}</p><p>,</p><br/>
@@ -83,6 +97,9 @@ class App extends React.Component {
                 <h2>Education</h2>
               </div>
             </Link>
+          </div>
+          <div>
+            test
           </div>
         </div>
       </Router>
