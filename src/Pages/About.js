@@ -39,32 +39,36 @@ class About extends React.Component {
 
   render() {
     return (
-      <div id="about" className="SharedOutter AboutOutter">
-        <div className="About-Top">
-          <div className="About-Image">
-            {this.state.AboutPic != null &&
-              <img src={this.state.AboutPic} alt="Alistair Fink Portrait"/>
-            }
-          </div>
-          <div className="About-Title">
-            <h1>Alistair Fink</h1>
-            <h3>Software Engineer</h3>
-          </div>
-        </div>
-        <div className="About-Bottom">
-          {this.state.AboutDesc != null && this.state.AboutDesc.map((item, i) =>
-            <div key={i} className="AboutDesc">
-              <p>{item.Content}</p><br/>
+      <div id="about" style={{paddingTop: '10vh'}}>
+        <div className="TriangleTopLeft"></div>
+        <div className="SharedOutter AboutOutter">
+          <div className="About-Top">
+            <div className="About-Image">
+              {this.state.AboutPic != null &&
+                <img src={this.state.AboutPic} alt="Alistair Fink Portrait"/>
+              }
             </div>
-          )}
-          <div className="AboutLinks">
-            <a className="AboutLink" href="https://github.com/alistairfink"><img src={Github} alt="Alistair's Github"/>GitHub</a>
-            <a className="AboutLink" href="https://www.linkedin.com/in/alistairfink/"><img src={LinkedIn} alt="Alistair's LinkedIn"/>LinkedIn</a>
-            <a className="AboutLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing"><img src={Resume} alt="Alistair's Resume"/>Resume</a>
-            <a className="AboutLink" href="mailto:alistairfink@gmail.com"><img src={Email} alt="alistairfink@gmail.com"/>alistairfink@gmail.com</a>
-            <a className="AboutLink" href="tel:289-259-6008"><img src={Phone} alt="289-259-6008"/>(289) 259-6008</a>
+            <div className="About-Title">
+              <h1>Alistair Fink</h1>
+              <h3>Software Engineer</h3>
+            </div>
+          </div>
+          <div className="About-Bottom">
+            {this.state.AboutDesc != null && this.state.AboutDesc.map((item, i) =>
+              <div key={i} className="AboutDesc">
+                <p>{item.Content}</p><br/>
+              </div>
+            )}
+            <div className="AboutLinks">
+              <a className="AboutLink" href="https://github.com/alistairfink"><img src={Github} alt="Alistair's Github"/>GitHub</a>
+              <a className="AboutLink" href="https://www.linkedin.com/in/alistairfink/"><img src={LinkedIn} alt="Alistair's LinkedIn"/>LinkedIn</a>
+              <a className="AboutLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing"><img src={Resume} alt="Alistair's Resume"/>Resume</a>
+              <a className="AboutLink" href="mailto:alistairfink@gmail.com"><img src={Email} alt="alistairfink@gmail.com"/>alistairfink@gmail.com</a>
+              <a className="AboutLink" href="tel:289-259-6008"><img src={Phone} alt="289-259-6008"/>(289) 259-6008</a>
+            </div>
           </div>
         </div>
+        <div className="TriangleBottomLeft"></div>
       </div>
     );
   }

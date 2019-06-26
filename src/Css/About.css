@@ -1,6 +1,8 @@
 .AboutOutter {
-	margin-left: 28vw;
-	margin-right: 22vw;
+/*	margin-left: 28vw;
+	margin-right: 22vw;*/
+	padding-left: 28vw;
+	padding-right: 22vw;
 }
 
 .About-Top{
@@ -64,6 +66,7 @@
 }
 
 .AboutLink:hover {
+  	background-color: #6b6e70; 
   	filter: brightness(0.8);
 	border-radius: 5px;
 }

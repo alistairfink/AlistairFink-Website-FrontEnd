@@ -8,7 +8,9 @@ import "../Css/Home.css";
 
 // Components
 import About from "./About.js";
-import Projects from "./Projects.js"
+import Projects from "./Projects.js";
+import Experience from "./Experience.js";
+import Education from "./Education.js";
 
 // Pictures
 import ComputerIcon from "../Resources/programming (4).svg";
@@ -126,12 +128,8 @@ class Home extends React.Component {
         </div>
         <About smallScreen={this.state.smallScreen}/>
         <Projects smallScreen={this.state.smallScreen}/>
-        <div id="experience" style={{height: '700px', paddingTop: '10vh'}}>
-          <h1>Experience</h1>
-        </div>
-        <div id="education" style={{height: '700px', paddingTop: '10vh'}}>
-          <h1>Education</h1>
-        </div>
+        <Experience smallScreen={this.state.smallScreen}/>
+        <Education smallScreen={this.state.smallScreen}/>
       </div>
     );
   }
