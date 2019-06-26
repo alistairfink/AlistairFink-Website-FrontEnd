@@ -1,0 +1,11 @@
+:root {
+  --background-colour: #6b6e70;
+}
+
+.SharedOutter {
+	padding-top: 12vh;
+}
+
+.SharedOutter * {
+	background-color: var(--background-colour);
+}

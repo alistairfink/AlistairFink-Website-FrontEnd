@@ -1,0 +1,74 @@
+.AboutOutter {
+	margin-left: 28vw;
+	margin-right: 22vw;
+}
+
+.About-Top{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.About-Image {
+	display: flex;
+}
+
+.About-Image > img {
+	height: 20vh;
+	border-radius: 360px;
+	margin-right: 50px;
+}
+
+.About-Title {
+	flex: 1;}
+
+.About-Title > h1 {
+	font-size: 5rem;
+	color: #A6CE28;
+
+}
+
+.About-Title > h3 {
+	font-size: 2rem;
+	color: #E7C855;
+}
+
+.AboutDesc {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 100px;
+	color: #dadfe1;
+}
+
+.AboutLinks {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+	justify-content: flex-start;
+}
+
+.AboutLink {
+	display: inline-flex;
+	align-items: center;
+	color: #43B0EF;
+	text-decoration: none;
+	padding-right: 20px;
+}
+
+.AboutLink > img {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	margin-right: 5px;
+	height: 2rem;
+}
+
+.AboutLink:hover {
+  filter: brightness(0.8);
+	border-radius: 5px;
+}
+
+.AbolutLink > img:hover {
+	background-color: red;
+
+}

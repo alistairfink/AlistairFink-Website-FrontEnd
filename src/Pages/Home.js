@@ -1,8 +1,16 @@
+// Libraries
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import "../Css/Home.css";
-import ComputerIcon from "../Resources/programming (4).svg";
 import { HashLink as Link } from "react-router-hash-link";
+
+// CSS
+import "../Css/Home.css";
+
+// Components
+import About from "./About.js";
+
+// Pictures
+import ComputerIcon from "../Resources/programming (4).svg";
 import Github from "../Resources/Github.png";
 import LinkedIn from "../Resources/LinkedIn.png";
 import Resume from "../Resources/Resume.png";
@@ -74,15 +82,15 @@ class Home extends React.Component {
         <div className="Home">
         	<div>
         		<div className="Logos">
-        			<a className="LogoLink" href="https://github.com/alistairfink"><img src={Github}/></a>
-        			<a className="LogoLink" href="https://www.linkedin.com/in/alistairfink/"><img src={LinkedIn}/></a>
-        			<a className="LogoLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing"><img src={Resume}/></a>
-        			<a className="LogoLink" href="mailto:alistairfink@gmail.com"><img src={Email}/></a>
+        			<a className="LogoLink" href="https://github.com/alistairfink"><img src={Github} alt="Alistair's Github"/></a>
+        			<a className="LogoLink" href="https://www.linkedin.com/in/alistairfink/"><img src={LinkedIn} alt="Alistair's LinkedIn"/></a>
+        			<a className="LogoLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing"><img src={Resume} alt="Alistair's Resume"/></a>
+        			<a className="LogoLink" href="mailto:alistairfink@gmail.com"><img src={Email} alt="Alistair's Email"/></a>
         		</div>
 	          <div className="Title">
 	            {!this.state.smallScreen &&
 	              <div className="Title-Image">
-	                <img src={ComputerIcon} />
+	                <img src={ComputerIcon} alt="Logo"/>
 	              </div>
 	            }
 	            <div className="Title-Text">
@@ -120,9 +128,7 @@ class Home extends React.Component {
               </div>
             </Link>
           </div>
-          <div id="about" >
-            <h1>About</h1>
-          </div>
+          <About smallScreen={this.state.smallScreen}/>
           <div id="projects" style={{height: '700px', paddingTop: '10vh'}}>
             <h1>Projects</h1>
           </div>
