@@ -39,8 +39,7 @@ class About extends React.Component {
 
   render() {
     return (
-      <div id="about" style={{paddingTop: '10vh'}}>
-        <div className="TriangleTopLeft"></div>
+      <div id="about">
         <div className="SharedOutter AboutOutter">
           <div className="About-Top">
             <div className="About-Image">
@@ -67,9 +66,7 @@ class About extends React.Component {
               <a className="AboutLink" href="tel:289-259-6008"><img src={Phone} alt="289-259-6008"/>(289) 259-6008</a>
             </div>
           </div>
-        </div>
-        <div className="TriangleBottomLeft"></div>
-      </div>
+        </div>      </div>
     );
   }
 }

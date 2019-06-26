@@ -31,11 +31,11 @@ class Experience extends React.Component {
   render() {
     return (
       <div id="experience">
-        <div className="TriangleTopLeft"></div>
-        <div className="SharedOutter ">
+        <div className="TriangleTopRight"></div>
+        <div className="SharedOutter ExperienceOutter">
         Test
         </div>
-        <div className="TriangleBottomLeft"></div>
+        <div className="TriangleBottomRight"></div>
       </div>
     );
   }

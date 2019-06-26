@@ -1,8 +1,8 @@
 .AboutOutter {
-/*	margin-left: 28vw;
-	margin-right: 22vw;*/
 	padding-left: 28vw;
 	padding-right: 22vw;
+	background-color: transparent;
+	padding-top: 20vh;
 }
 
 .About-Top{

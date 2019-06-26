@@ -2,6 +2,8 @@
   --header-top-colour: rgba(35, 39, 42, 1);
   --header-bottom-colour: rgba(35, 39, 42, 0.5);
   --header-transition-speed: 0.65s;
+  --lower-background: #474b4f;
+  --lower-shadow: rgba(35, 39, 42, 0.8);
   --top-opacity: 1;
   --bottom-opacity: 1;
 }
@@ -14,7 +16,6 @@ h1, h2, h3, h3, p {
 
 .Home {
   width: 100%;
-  height: 10000px;
   background: #6b6e70;
 }
 

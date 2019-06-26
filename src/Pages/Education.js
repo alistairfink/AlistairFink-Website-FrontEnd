@@ -31,11 +31,9 @@ class Education extends React.Component {
   render() {
     return (
       <div id="education">
-        <div className="TriangleTopRight"></div>
-        <div className="SharedOutter ">
+        <div className="SharedOutter2 EducationOutter">
         Test
         </div>
-        <div className="TriangleBottomRight"></div>
       </div>
     );
   }
