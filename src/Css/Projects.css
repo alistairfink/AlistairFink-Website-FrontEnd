@@ -1,0 +1,79 @@
+.Projects-Outter {
+	margin-left: 10vw;
+	margin-right: 10vw;
+
+}
+.Projects-Title {
+	display: flex;
+	justify-content: center;
+}
+
+.Projects-Title > h1 {
+	font-size: 5rem;
+	color: #A6CE28;	
+}
+
+.Featured-Outter {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.Project {
+	max-width: 20vw;
+	margin-left: 20px;
+	margin-right: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Project > p {
+	font-size: 1.5rem;
+	color: #dadfe1;
+	text-align: center;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+	margin-top: 5px;
+}
+
+.Project:hover {
+  	filter: brightness(0.8);
+	border-radius: 5px;
+}
+
+.Project > img {
+	height: 12rem;
+	border-width: 5px;
+	border-style: solid;
+	border-color: rgba(35, 39, 42, 1);
+	border-radius: 10px;
+	margin: 50px;
+	margin-bottom: 0px;
+}
+
+.Portfolio-Link-Outter {
+	margin-left: 10vw;
+	padding: 10px;
+}
+
+.Portfolio-Link-Outter:hover {
+  	filter: brightness(0.8);
+	border-radius: 5px;
+}
+
+.Portfolio-Link {
+	margin-top: 30px;
+	display: inline-block;
+	text-decoration: none;
+	color: #43B0EF;
+	font-size: 1.5rem;
+}
+
+.Portfolio-Link-Outter > img {
+	height: 2rem;
+	vertical-align: bottom;
+	margin-right: 10px;
+}

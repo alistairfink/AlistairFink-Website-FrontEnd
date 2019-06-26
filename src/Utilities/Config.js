@@ -5,5 +5,6 @@ module.exports = {
 		Education: "/experience",
 		Experience: "/education",
 		Portfolio: "/portfolio",
+		Featured: "/portfolio/featured",
 	},
 }

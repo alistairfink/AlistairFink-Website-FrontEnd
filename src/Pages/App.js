@@ -8,8 +8,8 @@ class App extends React.Component {
       <Router onUpdate={this.hashLinkScroll}>
         <div>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Portfolio" component={ () => alert("LER") } />
-          <Route exact path="/Portfolio/:PortfolioUuid" component={ () => alert("LER") } />
+          <Route exact path="/Portfolio" component={ () => alert("portfolio") } />
+          <Route exact path="/Portfolio/:PortfolioUuid" component={ () => alert("test") } />
         </div>
       </Router>
     );
