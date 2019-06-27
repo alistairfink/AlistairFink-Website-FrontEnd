@@ -43,7 +43,7 @@ class Experience extends React.Component {
 		      		<div className="Experience-Item-Content">
 		      			<h2>{experience.Position}</h2>
 		      			<h3>{experience.Company} - {experience.Location}</h3>
-		      			<h3>{`${Moment(experience.StartDate).format("MMMM YYYY")}${experience.EndDate != null ? ` - ${Moment(experience.EndDate).format("MMMM YYYY")}` : " - Present"}`}</h3>
+		      			<h3>{`${Moment(experience.StartDate).format("MMMM YYYY")}${experience.EndDate != null && Moment(experience.StartDate).isBefore(experience.EndDate) ? ` - ${Moment(experience.EndDate).format("MMMM YYYY")}` : " - Present"}`}</h3>
 		      			<ul>
 		      				{experience.Content.map((content) => 
 		      					<li className="Experience-Item-Content-List-Item" key={i + "" + content.SortOrder}>{content.Content}</li>

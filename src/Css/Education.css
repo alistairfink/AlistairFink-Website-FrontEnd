@@ -10,6 +10,51 @@
 }
 
 .Education-Title > h1 {
+  margin-bottom: 20px;
   font-size: 5rem;
   color: #A6CE28; 
+}
+
+.Education-List {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.Education-Item {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: row;
+}
+
+.Education-Item-Image {
+  margin-right: 50px;
+}
+
+.Education-Item-Image > img {
+  width: 15vw;
+}
+
+.Education-Item-Content {
+}
+
+.Education-Item-Content > h2 {
+  font-size: 2rem;
+  color: #A6CE28;
+}
+
+.Education-Item-Content > h3 {
+  font-size: 1rem;
+  color: #E7C855;
+}
+
+.Education-Item-Content-List-Item {
+  color: #dadfe1;
+}
+
+.Education-SubTitle {
+  font-size: 1rem;
+  color: #A6CE28; 
+  margin-top: 10px; 
 }
