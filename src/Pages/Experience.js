@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import "../Css/Shared.css";
 import "../Css/Experience.css";
 import RestClient from "../Utilities/RestClient.js";
-import Moment from 'moment';
+import Moment from "moment";
+import Arrow from "../Resources/Arrow.png";
 
 class Experience extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class Experience extends React.Component {
     };
     this.LoadExperience = this.LoadExperience.bind(this);
     this.LoadExperienceCallback = this.LoadExperienceCallback.bind(this);
+    this.Toggle = this.Toggle.bind(this);
 
     this.LoadExperience();
   }
@@ -23,8 +25,20 @@ class Experience extends React.Component {
   }
 
   LoadExperienceCallback(json) {
+    json.forEach((val) => {
+      this.setState({
+        [val.Uuid]: false
+      });
+    });
     this.setState({
-    	Experience: json,
+    	Experience: json.reverse(),
+    });
+  }
+
+  Toggle(uuid) {
+    console.log((this.state)[uuid])
+    this.setState({
+      [uuid]: !(this.state)[uuid],
     });
   }
 
@@ -36,21 +50,23 @@ class Experience extends React.Component {
 	      </div>
 	      <div className="Experience-List">
 		      {this.state.Experience != null && this.state.Experience.map((experience, i) => 
-		      	<div key={i} className="Experience-Item">
-		      		<div className="Experience-Item-Image">
-		      			<img src={experience.LogoImage} tag={experience.Company + " Logo"}/>
-		      		</div>
-		      		<div className="Experience-Item-Content">
-		      			<h2>{experience.Position}</h2>
-		      			<h3>{experience.Company} - {experience.Location}</h3>
-		      			<h3>{`${Moment(experience.StartDate).format("MMMM YYYY")}${experience.EndDate != null && Moment(experience.StartDate).isBefore(experience.EndDate) ? ` - ${Moment(experience.EndDate).format("MMMM YYYY")}` : " - Present"}`}</h3>
-		      			<ul>
-		      				{experience.Content.map((content) => 
-		      					<li className="Experience-Item-Content-List-Item" key={i + "" + content.SortOrder}>{content.Content}</li>
-	      					)}
-		      			</ul>
-		      		</div>
-		      	</div>
+            <div key={i} className="Experience-Item" onClick={() => this.Toggle(experience.Uuid)}>
+              <div className={"Experience-Item-Top " + (!(this.state)[experience.Uuid] ? "Experience-Item-Top-Open" : "Experience-Item-Top-Closed")}>
+                <img src={experience.LogoImage} tag={experience.Company + " Logo"}/>
+                <h1>{experience.Company}</h1>
+                <h2>{experience.Position}</h2>
+              </div>
+              <div className="Experience-Arrow">
+                <img className={"Experience-Arrow-Image " + (!(this.state)[experience.Uuid] ? "Experience-Arrow-Image-Down" : "Experience-Arrow-Image-Up")} src={Arrow} tag="Expand" />
+              </div>
+              <div className={"Experience-Item-Bottom " + (!(this.state)[experience.Uuid] ? "Experience-Item-Bottom-Closed" : "Experience-Item-Bottom-Open")}>
+                {experience.Content.map((content, j) => 
+                  <div key={i + "" + j}>
+                    <p>{content.Content}</p>
+                  </div>
+                )}
+              </div>
+            </div>
 	      	)}
       	</div>
       </div>

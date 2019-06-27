@@ -65,6 +65,9 @@ class Portfolio extends React.Component {
               </div>
             </div>
           )}
+          <div className="Portfolio-Title">
+            <h1>Portfolio</h1>
+          </div>
         </div>
       </div>
     );

@@ -1,7 +1,5 @@
 .Experience-Outter {
   background-color: var(--background-colour);
-  padding-left: 10vw;
-  padding-right: 10vw;
 }
 
 .Experience-Title {
@@ -19,36 +17,107 @@
   margin-left: 10vw;
   margin-right: 10vw;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .Experience-Item {
   display: flex;
-  margin-bottom: 20px;
   flex-direction: row;
+  width: 22rem;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(35, 39, 42, 1);
+  border-radius: 10px;
+  margin: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 15rem;
 }
 
-.Experience-Item-Image {
-  margin-right: 50px;
+.Experience-Arrow {
+  flex: 0.05;
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
-.Experience-Item-Image > img {
-  width: 15vw;
+.Experience-Arrow-Image {
+  width: 1rem;
+  height: 2rem;
 }
 
-.Experience-Item-Content {
+.Experience-Arrow-Image-Down {
+  transition: transform 0.6s;
+  transform: rotateY(0deg);
 }
 
-.Experience-Item-Content > h2 {
-  font-size: 2rem;
+.Experience-Arrow-Image-Up {
+  transition: transform 0.6s;
+  transform: rotateY(180deg);
+}
+
+.Experience-Item:hover {
+  cursor: pointer;
+  background-color: #6b6e70; 
+  filter: brightness(0.8);
+  border-radius: 10px;
+}
+
+.Experience-Item-Top {
+}
+
+.Experience-Item-Top-Open {
+  display: flex;
+  flex: 0.95;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Experience-Item-Top-Closed {
+  display: none;
+  
+}
+
+.Experience-Item-Top > h1 {
   color: #A6CE28;
+  font-size: 1.7rem;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+
 }
 
-.Experience-Item-Content > h3 {
-  font-size: 1rem;
+.Experience-Item-Top > h2 {
   color: #E7C855;
+  font-size: 1.5rem;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
-.Experience-Item-Content-List-Item {
-  color: #dadfe1;
+.Experience-Item-Top > img {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 15rem;
+}
+
+.Experience-Item-Bottom {
+  max-height: inherit; 
+  margin-left: 20px;
+}
+
+.Experience-Item-Bottom-Closed {
+  display: none;
+}
+
+.Experience-Item-Bottom-Open {
+  overflow-y: scroll;
 }

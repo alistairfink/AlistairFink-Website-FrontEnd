@@ -10,7 +10,7 @@
 
 .Portfolio-YearTitle {
 	font-size: 3.5rem;
-	color: #A6CE28;
+	color: #E7C855;
 	margin-top: 50px;
 }
 
@@ -51,4 +51,15 @@
 	font-size: 2.7rem;
 	margin-right: 10px;
 	color: #43B0EF;
+}
+
+.Portfolio-Title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Portfolio-Title > h1 {
+	font-size: 5rem;
+	color: #A6CE28;	
 }
