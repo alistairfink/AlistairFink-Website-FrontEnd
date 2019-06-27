@@ -30,18 +30,24 @@ class Home extends React.Component {
 
     this.smallScreen = this.smallScreen.bind(this);
     this.hashLinkScroll = this.hashLinkScroll.bind(this);
+    this.listenScrollEvent = this.listenScrollEvent.bind(this);
   }
 
-  listenScrollEvent = e => {
-    if(this.refs.header.getBoundingClientRect().y === 0) {
-      this.setState({
-        scrolled: true,
-        headerClass: "HeaderScrolled"
-      });
-    } else if(this.state.scrolled) {
-      this.setState({
-        headerClass: "HeaderTop"
-      });
+  listenScrollEvent(e) {
+    if(window.location.pathname == "/") {
+      try {
+        if(this.refs.header.getBoundingClientRect().y === 0) {
+          this.setState({
+            scrolled: true,
+            headerClass: "HeaderScrolled"
+          });
+        } else if(this.state.scrolled) {
+          this.setState({
+            headerClass: "HeaderTop"
+          });
+        }
+      }
+      catch(error) {}
     }
   }
 
@@ -67,7 +73,15 @@ class Home extends React.Component {
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent)
     this.smallScreen()
-    setTimeout(() => this.hashLinkScroll(), 1000)
+
+    const { hash } = window.location;
+    if (hash !== '') {
+      setTimeout(() => () => {
+        this.hashLinkScroll();
+      }, 1000);
+    } else {
+      window.scrollTo(0,0);
+    }
   }
 
   componentWillUnmount() {

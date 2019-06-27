@@ -29,6 +29,13 @@ class RestClient {
 				callback(responseJson);
 			});
 	}
+	GetPortfolio(callback) {
+		fetch(Config.ApiEndPointRoot + Config.ApiEndPoints.Portfolio)
+			.then((response) => response.json())
+			.then((responseJson) => {
+				callback(responseJson);
+			});
+	}
 }
 
 export default RestClient;

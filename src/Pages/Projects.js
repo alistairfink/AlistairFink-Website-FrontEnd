@@ -9,7 +9,7 @@ class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      FeaturedProjects: null
+      FeaturedProjects: null,
     };
     this.LoadProjects = this.LoadProjects.bind(this);
     this.LoadProjectsCallback = this.LoadProjectsCallback.bind(this);

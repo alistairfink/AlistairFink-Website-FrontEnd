@@ -1,0 +1,54 @@
+.Portfolio-TopLevel {
+	min-height: 100vh;
+	max-width: 100%;
+	background-color: #474b4f;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	padding: 50px;
+}
+
+.Portfolio-YearTitle {
+	font-size: 3.5rem;
+	color: #A6CE28;
+	margin-top: 50px;
+}
+
+.Portfolio-Item-List {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+
+.Portfolio-Back {
+	position: fixed;
+	margin-top: 10px;
+	margin-left: 0px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #6b6e70;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	z-index: 999;
+  	text-decoration: none;
+}
+
+.Portfolio-Back:hover { 
+  	filter: brightness(0.8);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.Portfolio-Back > img {
+	height: 3rem;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.Portfolio-Back > h2 {
+	font-size: 2.7rem;
+	margin-right: 10px;
+	color: #43B0EF;
+}
