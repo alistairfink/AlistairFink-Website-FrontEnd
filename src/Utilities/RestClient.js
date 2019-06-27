@@ -15,6 +15,20 @@ class RestClient {
 				callback(responseJson);
 			});
 	}
+	GetExperience(callback) {
+		fetch(Config.ApiEndPointRoot + Config.ApiEndPoints.Experience)
+			.then((response) => response.json())
+			.then((responseJson) => {
+				callback(responseJson);
+			});
+	}
+	GetEducation(callback) {
+		fetch(Config.ApiEndPointRoot + Config.ApiEndPoints.Education)
+			.then((response) => response.json())
+			.then((responseJson) => {
+				callback(responseJson);
+			});
+	}
 }
 
 export default RestClient;

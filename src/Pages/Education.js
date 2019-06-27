@@ -8,20 +8,20 @@ class Education extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      Education: null
     };
-    this.LoadAbout = this.LoadAbout.bind(this);
-    this.LoadAboutCallback = this.LoadAboutCallback.bind(this);
+    this.LoadEducation = this.LoadEducation.bind(this);
+    this.LoadEducationCallback = this.LoadEducationCallback.bind(this);
 
-    this.LoadAbout();
+    this.LoadEducation();
   }
 
-  LoadAbout() {
+  LoadEducation() {
     var restClient = new RestClient();
-    restClient.GetAbout(this.LoadAboutCallback);
+    restClient.GetEducation(this.LoadEducationCallback);
   }
 
-  LoadAboutCallback(json) {
+  LoadEducationCallback(json) {
     this.setState({
       AboutPic: json.Image,
       AboutDesc: json.Description,
@@ -30,9 +30,9 @@ class Education extends React.Component {
 
   render() {
     return (
-      <div id="education">
-        <div className="SharedOutter2 EducationOutter">
-        Test
+      <div id="education" className="SharedOutter2 Education-Outter">
+        <div className="Education-Title">
+          <h1>Education</h1>
         </div>
       </div>
     );

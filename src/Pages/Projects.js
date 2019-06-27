@@ -23,7 +23,6 @@ class Projects extends React.Component {
   }
 
   LoadProjectsCallback(json) {
-    console.log(json);
     this.setState({
       FeaturedProjects: json
     });

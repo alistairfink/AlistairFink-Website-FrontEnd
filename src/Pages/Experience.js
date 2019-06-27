@@ -3,39 +3,56 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import "../Css/Shared.css";
 import "../Css/Experience.css";
 import RestClient from "../Utilities/RestClient.js";
+import Moment from 'moment';
 
 class Experience extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+    	Experience: null,
     };
-    this.LoadAbout = this.LoadAbout.bind(this);
-    this.LoadAboutCallback = this.LoadAboutCallback.bind(this);
+    this.LoadExperience = this.LoadExperience.bind(this);
+    this.LoadExperienceCallback = this.LoadExperienceCallback.bind(this);
 
-    this.LoadAbout();
+    this.LoadExperience();
   }
 
-  LoadAbout() {
+  LoadExperience() {
     var restClient = new RestClient();
-    restClient.GetAbout(this.LoadAboutCallback);
+    restClient.GetExperience(this.LoadExperienceCallback);
   }
 
-  LoadAboutCallback(json) {
+  LoadExperienceCallback(json) {
     this.setState({
-      AboutPic: json.Image,
-      AboutDesc: json.Description,
+    	Experience: json,
     });
   }
 
   render() {
     return (
-      <div id="experience">
-        <div className="TriangleTopRight"></div>
-        <div className="SharedOutter ExperienceOutter">
-        Test
-        </div>
-        <div className="TriangleBottomRight"></div>
+      <div id="experience" className="SharedOutter Experience-Outter">
+	      <div className="Experience-Title">
+	        <h1>Experience</h1>
+	      </div>
+	      <div className="Experience-List">
+		      {this.state.Experience != null && this.state.Experience.map((experience, i) => 
+		      	<div key={i} className="Experience-Item">
+		      		<div className="Experience-Item-Image">
+		      			<img src={experience.LogoImage} tag={experience.Company + " Logo"}/>
+		      		</div>
+		      		<div className="Experience-Item-Content">
+		      			<h2>{experience.Position}</h2>
+		      			<h3>{experience.Company} - {experience.Location}</h3>
+		      			<h3>{`${Moment(experience.StartDate).format("MMMM YYYY")}${experience.EndDate != null ? ` - ${Moment(experience.EndDate).format("MMMM YYYY")}` : " - Present"}`}</h3>
+		      			<ul>
+		      				{experience.Content.map((content) => 
+		      					<li className="Experience-Item-Content-List-Item" key={i + "" + content.SortOrder}>{content.Content}</li>
+	      					)}
+		      			</ul>
+		      		</div>
+		      	</div>
+	      	)}
+      	</div>
       </div>
     );
   }

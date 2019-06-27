@@ -1,3 +1,15 @@
-.EducationOutter {
+.Education-Outter {
+  padding-left: 10vw;
+  padding-right: 10vw;
   margin-bottom: 0px;
+}
+
+.Education-Title {
+  display: flex;
+  justify-content: center;
+}
+
+.Education-Title > h1 {
+  font-size: 5rem;
+  color: #A6CE28; 
 }

@@ -2,8 +2,8 @@ module.exports = {
 	ApiEndPointRoot: "http://alistairfink.com/alistairfink/api",
 	ApiEndPoints: {
 		About: "/about",
-		Education: "/experience",
-		Experience: "/education",
+		Education: "/education",
+		Experience: "/experience",
 		Portfolio: "/portfolio",
 		Featured: "/portfolio/featured",
 	},

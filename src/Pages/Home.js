@@ -55,7 +55,6 @@ class Home extends React.Component {
 
   hashLinkScroll() {
     const { hash } = window.location;
-    console.log(hash)
     if (hash !== '') {
       setTimeout(() => {
         const id = hash.replace('#', '');
@@ -68,7 +67,7 @@ class Home extends React.Component {
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent)
     this.smallScreen()
-    setTimeout(() => this.hashLinkScroll(), 100)
+    setTimeout(() => this.hashLinkScroll(), 1000)
   }
 
   componentWillUnmount() {
