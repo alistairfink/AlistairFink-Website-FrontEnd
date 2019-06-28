@@ -37,7 +37,7 @@ class Education extends React.Component {
           {this.state.Education != null && this.state.Education.map((education, i) => 
             <div key={i} className={this.props.smallScreen ? "Education-Item-Mobile" : "Education-Item"}>
               <div className={this.props.smallScreen ? "Education-Item-Image-Mobile" : "Education-Item-Image"}>
-                <img src={education.SchoolLogo} tag={education.SchoolName + " Logo"}/>
+                <img src={education.SchoolLogo} alt={education.SchoolName + " Logo"}/>
               </div>
               <div className="Education-Item-Content">
                 <h2>{education.SchoolName}</h2>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import "../Css/Shared.css";
 import "../Css/Projects.css";
 import RestClient from "../Utilities/RestClient.js";
@@ -38,7 +38,7 @@ class Projects extends React.Component {
           {this.state.FeaturedProjects != null && this.state.FeaturedProjects.map((project, i) => 
             <Link to={{pathname: "/portfolio/" + project.Uuid, backLocation: "/"}} key={i} style={{textDecorationLine: 'none'}}>
               <div className="Project">
-                <img src={project.Thumbnail}/>
+                <img src={project.Thumbnail} alt={project.Name + " Thumbnail"}/>
                 <p>{project.Name}</p>
               </div>
             </Link>

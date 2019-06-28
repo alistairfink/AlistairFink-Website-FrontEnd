@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import "../Css/Portfolio.css";
 import RestClient from "../Utilities/RestClient.js";
-import { HashLink } from "react-router-hash-link";
 import Home from "../Resources/Home.png";
 
 class Portfolio extends React.Component {
@@ -57,7 +56,7 @@ class Portfolio extends React.Component {
     return (
       <div>
         <Link to={"/"} className="Portfolio-Back">
-          <img src={Home} tag="Home"/>
+          <img src={Home} alt="Home"/>
           <h2>Home</h2>
         </Link>
         <div className="Portfolio-TopLevel">
@@ -68,7 +67,7 @@ class Portfolio extends React.Component {
                 {this.state.Portfolio[year].map((portfolioItem, i) => 
                   <Link to={{pathname:"/portfolio/" + portfolioItem.Uuid, backLocation: "/portfolio"}} key={i} style={{textDecorationLine: 'none'}}>
                     <div className={!this.state.smallScreen ? "Project" : "Project-Mobile"}>
-                      <img src={portfolioItem.Thumbnail}/>
+                      <img src={portfolioItem.Thumbnail} alt={portfolioItem.Name + " Thumbnail"}/>
                       <p>{portfolioItem.Name}</p>
                     </div>
                   </Link>

@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import "../Css/PortfolioItem.css";
 import RestClient from "../Utilities/RestClient.js";
-import { HashLink } from "react-router-hash-link";
 import Close from "../Resources/Close.png";
 import Slider from "react-slick";
 import Linkify from 'react-linkify';
@@ -56,13 +55,12 @@ class PortfolioItem extends React.Component {
       swipe: true,
       draggable: true,
       focuseOnSelect: false,
-      touchMove: true,
       swipeToSlide: true,
     };
     return (
       <div className="Portfolio-Item-Page-Outter">
         <Link to={this.props.location.backLocation} className="Portfolio-Item-Back">
-          <img src={Close} tag="Back"/>
+          <img src={Close} alt="Back"/>
         </Link>
         {this.state.PortfolioItem != null &&
           <div>
@@ -73,7 +71,7 @@ class PortfolioItem extends React.Component {
               <Slider className={this.state.smallScreen ? "Carousel-Mobile" : "Carousel"} {...settings}>
                 {this.state.PortfolioItem.Image != null && this.state.PortfolioItem.Image.map((img, i) => 
                   <div className="Carousel-Item" key={i}>
-                    <img src={img.Image}/>
+                    <img src={img.Image} alt={this.state.PortfolioItem.Name + " Image " + i}/>
                   </div>
                 )}
                 {this.state.PortfolioItem.Video != null && this.state.PortfolioItem.Video.map((vid, i) => 

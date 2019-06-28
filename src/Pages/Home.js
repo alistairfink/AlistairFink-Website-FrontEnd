@@ -1,6 +1,5 @@
 // Libraries
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 
 // CSS
@@ -37,7 +36,7 @@ class Home extends React.Component {
   }
 
   listenScrollEvent(e) {
-    if(window.location.pathname == "/") {
+    if(window.location.pathname === "/") {
       try {
         if(this.refs.header.getBoundingClientRect().y <= 0) {
           this.setState({
@@ -98,7 +97,7 @@ class Home extends React.Component {
       <div className="Home">
         {this.state.smallScreen && this.state.mobileShow &&
           <div className="Mobile-Hamburger" onClick={() => this.setState({mobileOpen: !this.state.mobileOpen})}>
-            <img src={Menu} tag="Menu"/>
+            <img src={Menu} alt="Menu"/>
           </div>
         }
         {this.state.smallScreen && this.state.mobileOpen &&

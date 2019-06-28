@@ -1,8 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import "../Css/Shared.css";
 import "../Css/About.css";
-import AlistairFink from "../Resources/Portrait.png";
 import RestClient from "../Utilities/RestClient.js";
 
 
