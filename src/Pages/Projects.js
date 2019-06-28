@@ -45,7 +45,7 @@ class Projects extends React.Component {
           )}
         </div>
         <div>
-          <Link className="Portfolio-Link-Outter" exact to="/portfolio">
+          <Link className="Portfolio-Link-Outter" to="/portfolio">
             {!this.props.smallScreen && <img src={Portfolio} alt="Portfolio"/> }
             <div className="Portfolio-Link">
               Click to View Full Portfolio

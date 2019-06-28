@@ -18,6 +18,7 @@ import Github from "../Resources/Github.png";
 import LinkedIn from "../Resources/LinkedIn.png";
 import Resume from "../Resources/Resume.png";
 import Email from "../Resources/Email.png";
+import Menu from "../Resources/Menu.png";
 
 class Home extends React.Component {
   constructor(props) {
@@ -26,6 +27,8 @@ class Home extends React.Component {
       scrolled: false,
       headerClass: "HeaderTopFirstLoad",
       smallScreen: false,
+      mobileOpen: false,
+      mobileShow: false,
     };
 
     this.smallScreen = this.smallScreen.bind(this);
@@ -36,14 +39,16 @@ class Home extends React.Component {
   listenScrollEvent(e) {
     if(window.location.pathname == "/") {
       try {
-        if(this.refs.header.getBoundingClientRect().y === 0) {
+        if(this.refs.header.getBoundingClientRect().y <= 0) {
           this.setState({
             scrolled: true,
-            headerClass: "HeaderScrolled"
+            headerClass: "HeaderScrolled",
+            mobileShow: true,
           });
         } else if(this.state.scrolled) {
           this.setState({
-            headerClass: "HeaderTop"
+            headerClass: "HeaderTop",
+            mobileShow: false,
           });
         }
       }
@@ -91,6 +96,27 @@ class Home extends React.Component {
   render() {
     return (
       <div className="Home">
+        {this.state.smallScreen && this.state.mobileShow &&
+          <div className="Mobile-Hamburger" onClick={() => this.setState({mobileOpen: !this.state.mobileOpen})}>
+            <img src={Menu} tag="Menu"/>
+          </div>
+        }
+        {this.state.smallScreen && this.state.mobileOpen &&
+          <div className="Mobile-Menu">
+            <Link className="Heading-Link-Mobile-Menu" smooth to="#about" onClick={() => this.setState({mobileOpen: !this.state.mobileOpen})}>
+                <h2>About</h2>
+            </Link>
+            <Link className="Heading-Link-Mobile-Menu" smooth to="#projects" onClick={() => this.setState({mobileOpen: !this.state.mobileOpen})}>
+              <h2>Projects</h2>
+            </Link>
+            <Link className="Heading-Link-Mobile-Menu" smooth to="#experience" onClick={() => this.setState({mobileOpen: !this.state.mobileOpen})}>
+              <h2>Experience</h2>
+            </Link>
+            <Link className="Heading-Link-Mobile-Menu" smooth to="#education" onClick={() => this.setState({mobileOpen: !this.state.mobileOpen})}>
+              <h2>Education</h2>
+            </Link>
+          </div>
+        }
       	<div>
       		<div className="Logos">
       			<a className="LogoLink" href="https://github.com/alistairfink"><img src={Github} alt="Alistair's Github"/></a>
@@ -98,7 +124,7 @@ class Home extends React.Component {
       			<a className="LogoLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing"><img src={Resume} alt="Alistair's Resume"/></a>
       			<a className="LogoLink" href="mailto:alistairfink@gmail.com"><img src={Email} alt="Alistair's Email"/></a>
       		</div>
-          <div className="Title">
+          <div className={this.state.smallScreen ? "Title-Mobile" : "Title"}>
             {!this.state.smallScreen &&
               <div className="Title-Image">
                 <img src={ComputerIcon} alt="Logo"/>
@@ -109,31 +135,31 @@ class Home extends React.Component {
               <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Name: </p><p className="Title-Text-Yellow">{"\"Alistair Fink\""}</p><p>,</p><br/>
               <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Location: </p><p className="Title-Text-Yellow">{"\"Toronto, Canada\""}</p><p>,</p><br/>
               <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Skill_Set: []</p><p className="Title-Text-Blue">{"string"}</p><p> {`{`}</p><br/>
-              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p className="Title-Text-Yellow">{"\"Full Stack Engineer\""}</p><p>,</p><br/>
+              <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p className="Title-Text-Yellow">{"\"Full Stack Developer\""}</p><p>,</p><br/>
               <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p className="Title-Text-Yellow">{"\"Android Developer\""}</p><p>,</p><br/>
               <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p className="Title-Text-Yellow">{"\"Go Developer\""}</p><p>,</p><br/>
               <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>{`}`}</p><br/>
-              <p>{`}`}</p><p className="Title-Blinking-Cursor"></p>
+              <p>{`}`}</p><p className={this.state.smallScreen ? "Title-Blinking-Cursor-Mobile" : "Title-Blinking-Cursor"}></p>
             </div>
           </div>
         </div>
-        <div className={`${this.state.headerClass} Header`} ref="header">
-          <Link className="Heading-Link" smooth to="#about">
+        <div className={`${this.state.headerClass} ${this.state.smallScreen ? "Header-Mobile" : "Header"}`} ref="header">
+          <Link className={this.state.smallScreen ? "Heading-Link-Mobile" : "Heading-Link"} smooth to="#about">
             <div className="Heading">
               <h2>About</h2>
             </div>
           </Link>
-          <Link className="Heading-Link" smooth to="#projects">
+          <Link className={this.state.smallScreen ? "Heading-Link-Mobile" : "Heading-Link"} smooth to="#projects">
             <div className="Heading">
               <h2>Projects</h2>
             </div>
           </Link>
-          <Link className="Heading-Link" smooth to="#experience">
+          <Link className={this.state.smallScreen ? "Heading-Link-Mobile" : "Heading-Link"} smooth to="#experience">
             <div className="Heading">
               <h2>Experience</h2>
             </div>
           </Link>
-          <Link className="Heading-Link" smooth to="#education">
+          <Link className={this.state.smallScreen ? "Heading-Link-Mobile" : "Heading-Link"} smooth to="#education">
             <div className="Heading">
               <h2>Education</h2>
             </div>
