@@ -104,7 +104,7 @@ class Home extends React.Component {
                 <img src={ComputerIcon} alt="Logo"/>
               </div>
             }
-            <div className="Title-Text">
+            <div className={this.state.smallScreen ? "Title-Text-Mobile" : "Title-Text"}>
               <p className="Title-Text-Blue">type </p><p className="Title-Text-Green">Software_Engineer </p><p className="Title-Text-Blue">struct </p><p>{`{`}</p><br/>
               <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Name: </p><p className="Title-Text-Yellow">{"\"Alistair Fink\""}</p><p>,</p><br/>
               <p>{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"}</p><p>Location: </p><p className="Title-Text-Yellow">{"\"Toronto, Canada\""}</p><p>,</p><br/>

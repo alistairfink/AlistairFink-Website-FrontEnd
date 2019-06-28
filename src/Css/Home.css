@@ -172,6 +172,17 @@ h1, h2, h3, h3, p {
   display: inline;
 }
 
+.Title-Text-Mobile {
+  margin-left: 25px;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.Title-Text-Mobile > p {
+  display: inline;
+}
+
+
 .Title-Text-Yellow {
   color: #E7C855;
 }
