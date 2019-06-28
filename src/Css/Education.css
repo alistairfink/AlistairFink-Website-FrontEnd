@@ -28,6 +28,12 @@
   flex-direction: row;
 }
 
+.Education-Item-Mobile {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
 .Education-Item-Image {
   margin-right: 50px;
 }
@@ -36,7 +42,8 @@
   width: 15vw;
 }
 
-.Education-Item-Content {
+.Education-Item-Image-Mobile > img {
+  width: 60vw;
 }
 
 .Education-Item-Content > h2 {
