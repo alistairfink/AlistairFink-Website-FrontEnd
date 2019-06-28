@@ -36,7 +36,7 @@ class Projects extends React.Component {
         </div>
         <div className="Featured-Outter">
           {this.state.FeaturedProjects != null && this.state.FeaturedProjects.map((project, i) => 
-            <Link to={"/portfolio/" + project.Uuid} key={i} style={{textDecorationLine: 'none'}}>
+            <Link to={{pathname: "/portfolio/" + project.Uuid, backLocation: "/"}} key={i} style={{textDecorationLine: 'none'}}>
               <div className="Project">
                 <img src={project.Thumbnail}/>
                 <p>{project.Name}</p>

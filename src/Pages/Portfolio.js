@@ -51,11 +51,11 @@ class Portfolio extends React.Component {
         </Link>
         <div className="Portfolio-TopLevel">
           {this.state.Portfolio != null && Object.keys(this.state.Portfolio).map((year, i) =>
-            <div>
+            <div key={year}>
               <h1 className="Portfolio-YearTitle">{year}</h1>
               <div className="Portfolio-Item-List">
                 {this.state.Portfolio[year].map((portfolioItem, i) => 
-                  <Link to={"/portfolio/" + portfolioItem.Uuid} key={i} style={{textDecorationLine: 'none'}}>
+                  <Link to={{pathname:"/portfolio/" + portfolioItem.Uuid, backLocation: "/portfolio"}} key={i} style={{textDecorationLine: 'none'}}>
                     <div className="Project">
                       <img src={portfolioItem.Thumbnail}/>
                       <p>{portfolioItem.Name}</p>
