@@ -35,7 +35,7 @@
   padding-right: 10px;
   justify-content: flex-start;
   align-items: center;
-  height: 15rem;
+  height: 17rem;
 }
 
 .Experience-Arrow {
@@ -97,6 +97,16 @@
 .Experience-Item-Top > h2 {
   color: #E7C855;
   font-size: 1.5rem;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.Experience-Item-Top > h3 {
+  color: #dadfe1;
+  margin-top: 5px;
+  font-size: 0.8rem;
   text-align: center;
   overflow-wrap: break-word;
   word-wrap: break-word;

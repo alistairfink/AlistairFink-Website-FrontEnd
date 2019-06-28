@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import "../Css/Shared.css";
 import "../Css/Experience.css";
 import RestClient from "../Utilities/RestClient.js";
@@ -55,6 +54,7 @@ class Experience extends React.Component {
                 <img src={experience.LogoImage} tag={experience.Company + " Logo"}/>
                 <h1>{experience.Company}</h1>
                 <h2>{experience.Position}</h2>
+                <h3>{`${Moment(experience.StartDate).format("MMM YYYY")}${experience.EndDate != null && Moment(experience.StartDate).isBefore(experience.EndDate) ? ` - ${Moment(experience.EndDate).format("MMM YYYY")}` : " - Present"}`}</h3>
               </div>
               <div className="Experience-Arrow">
                 <img className={"Experience-Arrow-Image " + (!(this.state)[experience.Uuid] ? "Experience-Arrow-Image-Down" : "Experience-Arrow-Image-Up")} src={Arrow} tag="Expand" />
