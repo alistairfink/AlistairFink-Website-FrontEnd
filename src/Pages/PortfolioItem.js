@@ -22,6 +22,7 @@ class PortfolioItem extends React.Component {
 
   componentDidMount() {
     this.smallScreen();
+    window.scrollTo(0,0);
   }
 
   GetPortfolioItem() {
