@@ -59,6 +59,45 @@
 	margin-bottom: 0px;
 }
 
+.Project-Mobile {
+	max-width: 22rem;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Project-Mobile > p {
+	font-size: 1.5rem;
+	color: #dadfe1;
+	text-align: center;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+	margin-top: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.Project-Mobile:hover {
+  	background-color: #6b6e70; 
+  	filter: brightness(0.8);
+	border-radius: 5px;
+}
+
+.Project-Mobile > img {
+	height: 9rem;
+	border-width: 5px;
+	border-style: solid;
+	border-color: rgba(35, 39, 42, 1);
+	border-radius: 10px;
+	margin: 50px;
+	margin-top: 40px;
+	margin-bottom: 0px;
+}
+
 .Portfolio-Link-Outter {
 	margin-left: 10vw;
 	padding: 10px;

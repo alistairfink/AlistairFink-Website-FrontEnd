@@ -15,11 +15,13 @@ class PortfolioItem extends React.Component {
     };
     this.GetPortfolioItem = this.GetPortfolioItem.bind(this);
     this.LoadPortfolioItemCallback = this.LoadPortfolioItemCallback.bind(this);
+    this.smallScreen = this.smallScreen.bind(this);
 
     this.GetPortfolioItem();
   }
 
   componentDidMount() {
+    this.smallScreen();
   }
 
   GetPortfolioItem() {
@@ -31,6 +33,14 @@ class PortfolioItem extends React.Component {
     this.setState({
       PortfolioItem: json
     });
+  }
+
+  smallScreen() {
+    if(window.innerWidth < 1200){
+      this.setState({smallScreen: true})
+    } else {
+      this.setState({smallScreen: false})
+    }
   }
 
   render() {
@@ -55,21 +65,23 @@ class PortfolioItem extends React.Component {
         </Link>
         {this.state.PortfolioItem != null &&
           <div>
-            <div className="Portfolio-Item-Title">
+            <div className={"Portfolio-Item-Title" + (this.state.smallScreen ? " Portfolio-Item-Title-Mobile" : "")}>
               <h1>{this.state.PortfolioItem.Name}</h1>
             </div>
-            <Slider className="Carousel" {...settings}>
-              {this.state.PortfolioItem.Image != null && this.state.PortfolioItem.Image.map((img, i) => 
-                <div className="Carousel-Item" key={i}>
-                  <img src={img.Image}/>
-                </div>
-              )}
-              {this.state.PortfolioItem.Video != null && this.state.PortfolioItem.Video.map((vid, i) => 
-                <div className="Carousel-Item" key={i}>
-                  <iframe title={"Video " + i} src={vid.Video} allowFullScreen></iframe>
-                </div>
-              )}
-            </Slider>
+            {!(this.state.PortfolioItem.Image == null && this.state.PortfolioItem.Video == null) &&
+              <Slider className={this.state.smallScreen ? "Carousel-Mobile" : "Carousel"} {...settings}>
+                {this.state.PortfolioItem.Image != null && this.state.PortfolioItem.Image.map((img, i) => 
+                  <div className="Carousel-Item" key={i}>
+                    <img src={img.Image}/>
+                  </div>
+                )}
+                {this.state.PortfolioItem.Video != null && this.state.PortfolioItem.Video.map((vid, i) => 
+                  <div className="Carousel-Item" key={i}>
+                    <iframe title={"Video " + i} src={vid.Video} allowFullScreen></iframe>
+                  </div>
+                )}
+              </Slider>
+            }
             {this.state.PortfolioItem.Description != null && this.state.PortfolioItem.Description.map((desc, i) => 
               <div key={i} className="Portfolio-Item-Description">
                 <Linkify><p className="Portfolio-Item-Description-Text">{desc.Content}</p></Linkify><br/>

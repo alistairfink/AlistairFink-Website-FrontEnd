@@ -9,15 +9,18 @@ class Portfolio extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Portfolio: null
+      Portfolio: null,
+      smallScreen: false
     };
     this.LoadPortfolio = this.LoadPortfolio.bind(this);
     this.LoadPortfolioCallback = this.LoadPortfolioCallback.bind(this);
+    this.smallScreen = this.smallScreen.bind(this);
 
     this.LoadPortfolio();
   }
 
   componentDidMount() {
+    this.smallScreen();
     window.scrollTo(0,0); 
   }
 
@@ -42,6 +45,14 @@ class Portfolio extends React.Component {
     });
   }
 
+  smallScreen() {
+    if(window.innerWidth < 1200){
+      this.setState({smallScreen: true})
+    } else {
+      this.setState({smallScreen: false})
+    }
+  }
+
   render() {
     return (
       <div>
@@ -56,7 +67,7 @@ class Portfolio extends React.Component {
               <div className="Portfolio-Item-List">
                 {this.state.Portfolio[year].map((portfolioItem, i) => 
                   <Link to={{pathname:"/portfolio/" + portfolioItem.Uuid, backLocation: "/portfolio"}} key={i} style={{textDecorationLine: 'none'}}>
-                    <div className="Project">
+                    <div className={!this.state.smallScreen ? "Project" : "Project-Mobile"}>
                       <img src={portfolioItem.Thumbnail}/>
                       <p>{portfolioItem.Name}</p>
                     </div>

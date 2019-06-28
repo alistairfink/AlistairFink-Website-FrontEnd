@@ -33,6 +33,14 @@
 	margin-bottom: 50px;
 }
 
+.Carousel-Mobile {
+	display: flex;
+	height: 40vh;
+	margin-left: 7vw;
+	margin-right: 7vw;
+	margin-bottom: 50px;
+}
+
 .Carousel-Item {
 	margin-left: 30px;
 }
@@ -54,6 +62,7 @@
 }
 
 .Portfolio-Item-Title > h1 {
+	font-size: 5rem;
 	color: #A6CE28;
 }
 
@@ -65,4 +74,8 @@
 .Portfolio-Item-Description-Text {
 	white-space: pre-wrap;
 	color: #dadfe1;
+}
+
+.Portfolio-Item-Title-Mobile {
+	padding-top: 10vh;
 }
