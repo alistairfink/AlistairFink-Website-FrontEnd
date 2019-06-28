@@ -101,6 +101,7 @@
 .Portfolio-Link-Outter {
 	margin-left: 10vw;
 	padding: 10px;
+	height: 1000px;
 }
 
 .Portfolio-Link-Outter:hover {
@@ -118,7 +119,6 @@
 }
 
 .Portfolio-Link-Outter-Image {
-	padding-left: 10vw;
 	height: 2rem;
 	vertical-align: bottom;
 	margin-right: 10px;

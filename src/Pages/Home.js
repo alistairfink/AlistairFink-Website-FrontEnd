@@ -12,7 +12,7 @@ import Experience from "./Experience.js";
 import Education from "./Education.js";
 
 // Pictures
-import ComputerIcon from "../Resources/programming (4).svg";
+import ComputerIcon from "../Resources/Programming.svg";
 import Github from "../Resources/Github.png";
 import LinkedIn from "../Resources/LinkedIn.png";
 import Resume from "../Resources/Resume.png";
