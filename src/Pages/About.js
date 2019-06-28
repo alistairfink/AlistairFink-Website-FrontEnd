@@ -40,8 +40,8 @@ class About extends React.Component {
   render() {
     return (
       <div id="about">
-        <div className="SharedOutter AboutOutter">
-          <div className="About-Top">
+        <div className={"SharedOutter " + (this.props.smallScreen ? "AboutOutter-Mobile" : "AboutOutter")}>
+          <div className={this.props.smallScreen ? "About-Top-Mobile" : "About-Top"}>
             <div className="About-Image">
               {this.state.AboutPic != null &&
                 <img src={this.state.AboutPic} alt="Alistair Fink Portrait"/>
@@ -54,7 +54,7 @@ class About extends React.Component {
           </div>
           <div className="About-Bottom">
             {this.state.AboutDesc != null && this.state.AboutDesc.map((item, i) =>
-              <div key={i} className="AboutDesc">
+              <div key={i} className={"AboutDesc"}>
                 <p>{item.Content}</p><br/>
               </div>
             )}

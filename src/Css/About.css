@@ -5,9 +5,22 @@
 	padding-top: 20vh;
 }
 
+.AboutOutter-Mobile {
+	padding-left: 5vw;
+	padding-right: 5vw;
+	background-color: transparent;
+	padding-top: 20vh;
+}
+
 .About-Top{
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
+}
+
+.About-Top-Mobile {
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 }
 
@@ -47,6 +60,7 @@
 	flex-direction: row;
 	margin-top: 10px;
 	justify-content: flex-start;
+	flex-wrap: wrap;
 }
 
 .AboutLink {
