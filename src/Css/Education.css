@@ -11,8 +11,12 @@
 
 .Education-Title > h1 {
   margin-bottom: 20px;
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: #A6CE28; 
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .Education-List {

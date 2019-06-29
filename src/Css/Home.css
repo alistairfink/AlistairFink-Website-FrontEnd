@@ -172,6 +172,7 @@ h1, h2, h3, h3, p {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .Title-Image {
@@ -316,7 +317,7 @@ h1, h2, h3, h3, p {
 }
 
 .Mobile-Hamburger > img {
-  width: 10vw;
+  width: 30px;
 }
 
 .Heading-Link-Mobile-Menu {

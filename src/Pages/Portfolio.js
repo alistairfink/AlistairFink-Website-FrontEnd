@@ -57,7 +57,6 @@ class Portfolio extends React.Component {
       <div>
         <Link to={"/"} className="Portfolio-Back">
           <img src={Home} alt="Home"/>
-          <h2>Home</h2>
         </Link>
         <div className="Portfolio-TopLevel">
           {this.state.Portfolio != null && Object.keys(this.state.Portfolio).map((year, i) =>

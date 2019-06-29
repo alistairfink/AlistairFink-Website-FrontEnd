@@ -59,7 +59,7 @@ class PortfolioItem extends React.Component {
     };
     return (
       <div className="Portfolio-Item-Page-Outter">
-        <Link to={this.props.location.backLocation} className="Portfolio-Item-Back">
+        <Link to={this.props.location.backLocation == "/" ? "/" : "/portfolio" } className="Portfolio-Item-Back">
           <img src={Close} alt="Back"/>
         </Link>
         {this.state.PortfolioItem != null &&

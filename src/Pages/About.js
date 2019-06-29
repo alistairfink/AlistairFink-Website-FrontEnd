@@ -57,11 +57,11 @@ class About extends React.Component {
               </div>
             )}
             <div className="AboutLinks">
-              <a className="AboutLink" href="https://github.com/alistairfink"><img src={Github} alt="Alistair's Github"/>GitHub</a>
-              <a className="AboutLink" href="https://www.linkedin.com/in/alistairfink/"><img src={LinkedIn} alt="Alistair's LinkedIn"/>LinkedIn</a>
-              <a className="AboutLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing"><img src={Resume} alt="Alistair's Resume"/>Resume</a>
+              <a className="AboutLink" href="https://github.com/alistairfink" target="_blank"><img src={Github} alt="Alistair's Github"/>GitHub</a>
+              <a className="AboutLink" href="https://www.linkedin.com/in/alistairfink/" target="_blank"><img src={LinkedIn} alt="Alistair's LinkedIn"/>LinkedIn</a>
+              <a className="AboutLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing" target="_blank"><img src={Resume} alt="Alistair's Resume"/>Resume</a>
               <a className="AboutLink" href="mailto:alistairfink@gmail.com"><img src={Email} alt="alistairfink@gmail.com"/>alistairfink@gmail.com</a>
-              <a className="AboutLink" href="tel:289-259-6008"><img src={Phone} alt="289-259-6008"/>(289) 259-6008</a>
+              <a className="AboutLink" href="tel:289-259-6008" target="_blank"><img src={Phone} alt="289-259-6008"/>(289) 259-6008</a>
             </div>
           </div>
         </div>      </div>

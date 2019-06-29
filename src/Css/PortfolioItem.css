@@ -63,7 +63,13 @@
 }
 
 .Portfolio-Item-Title > h1 {
-	font-size: 5rem;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	font-size: 4rem;
+  	text-align: center;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
 	color: #A6CE28;
 }
 

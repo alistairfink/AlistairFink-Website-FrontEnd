@@ -38,9 +38,11 @@
 	flex: 1;}
 
 .About-Title > h1 {
-	font-size: 5rem;
+	font-size: 4.5rem;
 	color: #A6CE28;
-
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
 }
 
 .About-Title > h3 {

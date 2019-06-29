@@ -118,10 +118,10 @@ class Home extends React.Component {
         }
       	<div>
       		<div className="Logos">
-      			<a className="LogoLink" href="https://github.com/alistairfink"><img src={Github} alt="Alistair's Github"/></a>
-      			<a className="LogoLink" href="https://www.linkedin.com/in/alistairfink/"><img src={LinkedIn} alt="Alistair's LinkedIn"/></a>
-      			<a className="LogoLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing"><img src={Resume} alt="Alistair's Resume"/></a>
-      			<a className="LogoLink" href="mailto:alistairfink@gmail.com"><img src={Email} alt="Alistair's Email"/></a>
+      			<a className="LogoLink" href="https://github.com/alistairfink" target="_blank"><img src={Github} alt="Alistair's Github"/></a>
+      			<a className="LogoLink" href="https://www.linkedin.com/in/alistairfink/" target="_blank"><img src={LinkedIn} alt="Alistair's LinkedIn"/></a>
+      			<a className="LogoLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing" target="_blank"><img src={Resume} alt="Alistair's Resume"/></a>
+      			<a className="LogoLink" href="mailto:alistairfink@gmail.com" target="_blank"><img src={Email} alt="Alistair's Email"/></a>
       		</div>
           <div className={this.state.smallScreen ? "Title-Mobile" : "Title"}>
             {!this.state.smallScreen &&
