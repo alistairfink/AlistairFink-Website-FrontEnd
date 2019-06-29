@@ -59,11 +59,13 @@ class Experience extends React.Component {
                 <img className={"Experience-Arrow-Image " + (!(this.state)[experience.Uuid] ? "Experience-Arrow-Image-Down" : "Experience-Arrow-Image-Up")} src={Arrow} alt="Expand" />
               </div>
               <div className={"Experience-Item-Bottom " + (!(this.state)[experience.Uuid] ? "Experience-Item-Bottom-Closed" : "Experience-Item-Bottom-Open")}>
-                {experience.Content.map((content, j) => 
-                  <div key={i + "" + j}>
-                    <p>{content.Content}</p><br/>
-                  </div>
+                <div>
+                  {experience.Content.map((content, j) => 
+                    <div className="Experience-Item-Bottom-Text" key={i + "" + j}>
+                      <p>{content.Content}</p>
+                    </div>
                 )}
+                </div>
               </div>
             </div>
 	      	)}

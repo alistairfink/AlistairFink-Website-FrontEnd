@@ -28,7 +28,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	background-color: #6b6e70;
+	background-color: rgba(107,110,112, 0.7);
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	z-index: 999;

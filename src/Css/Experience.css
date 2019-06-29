@@ -124,11 +124,22 @@
   margin-left: 20px;
 }
 
+.Experience-Item-Bottom > div {
+  height: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow-y: auto;
+}
+
 .Experience-Item-Bottom-Closed {
   display: none;
 }
 
 .Experience-Item-Bottom-Open {
-  overflow-y: scroll;
   color: #dadfe1;
+}
+
+.Experience-Item-Bottom-Text {
+  margin-bottom: 15px;
+  margin-right: 25px;
 }
