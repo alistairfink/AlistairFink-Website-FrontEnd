@@ -42,26 +42,26 @@ class About extends React.Component {
           <div className={this.props.smallScreen ? "About-Top-Mobile" : "About-Top"}>
             <div className="About-Image">
               {this.state.AboutPic != null &&
-                <img src={this.state.AboutPic} alt="Alistair Fink Portrait"/>
+                <img className={this.props.smallScreen ? "About-Image-Img-Mobile" : "About-Image-Img"} src={this.state.AboutPic} alt="Alistair Fink Portrait"/>
               }
             </div>
-            <div className="About-Title">
+            <div className={this.props.smallScreen ? "About-Title-Mobile" : "About-Title"}>
               <h1>Alistair Fink</h1>
               <h3>Software Engineer</h3>
             </div>
           </div>
           <div className="About-Bottom">
             {this.state.AboutDesc != null && this.state.AboutDesc.map((item, i) =>
-              <div key={i} className={"AboutDesc"}>
+              <div key={i} className={this.props.smallScreen ? "AboutDesc-Mobile" : "AboutDesc"}>
                 <p>{item.Content}</p><br/>
               </div>
             )}
             <div className="AboutLinks">
-              <a className="AboutLink" href="https://github.com/alistairfink" target="_blank"><img src={Github} alt="Alistair's Github"/>GitHub</a>
-              <a className="AboutLink" href="https://www.linkedin.com/in/alistairfink/" target="_blank"><img src={LinkedIn} alt="Alistair's LinkedIn"/>LinkedIn</a>
-              <a className="AboutLink" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing" target="_blank"><img src={Resume} alt="Alistair's Resume"/>Resume</a>
-              <a className="AboutLink" href="mailto:alistairfink@gmail.com"><img src={Email} alt="alistairfink@gmail.com"/>alistairfink@gmail.com</a>
-              <a className="AboutLink" href="tel:289-259-6008" target="_blank"><img src={Phone} alt="289-259-6008"/>(289) 259-6008</a>
+              <a className="AboutLink" rel="noopener noreferrer" href="https://github.com/alistairfink" target="_blank"><img src={Github} alt="Alistair's Github"/>GitHub</a>
+              <a className="AboutLink" rel="noopener noreferrer" href="https://www.linkedin.com/in/alistairfink/" target="_blank"><img src={LinkedIn} alt="Alistair's LinkedIn"/>LinkedIn</a>
+              <a className="AboutLink" rel="noopener noreferrer" href="https://drive.google.com/file/d/12KtoofbXqJj4QFBQ4gzA0PMsdmMH5wpj/view?usp=sharing" target="_blank"><img src={Resume} alt="Alistair's Resume"/>Resume</a>
+              <a className="AboutLink" rel="noopener noreferrer" href="mailto:alistairfink@gmail.com"><img src={Email} alt="alistairfink@gmail.com"/>alistairfink@gmail.com</a>
+              <a className="AboutLink" rel="noopener noreferrer" href="tel:289-259-6008" target="_blank"><img src={Phone} alt="289-259-6008"/>(289) 259-6008</a>
             </div>
           </div>
         </div>      </div>

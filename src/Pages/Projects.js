@@ -44,12 +44,12 @@ class Projects extends React.Component {
             </Link>
           )}
         </div>
-          <Link className="Portfolio-Link-Outter" to="/portfolio">
-            {!this.props.smallScreen && <img className="Portfolio-Link-Outter-Image" src={Portfolio} alt="Portfolio"/> }
-            <div className="Portfolio-Link">
-              Click to View Full Portfolio
-            </div>
-          </Link>
+        <Link className={this.props.smallScreen ? "Portfolio-Link-Outter-Mobile" : "Portfolio-Link-Outter"} to="/portfolio">
+          {!this.props.smallScreen && <img className="Portfolio-Link-Outter-Image" src={Portfolio} alt="Portfolio"/> }
+          <div className={this.props.smallScreen ? "Portfolio-Link-Mobile" : "Portfolio-Link"}>
+            Click to View Full Portfolio
+          </div>
+        </Link>
       </div>
     );
   }

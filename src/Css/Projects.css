@@ -114,10 +114,29 @@
 	border-radius: 5px;
 }
 
+.Portfolio-Link-Outter-Mobile {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.Portfolio-Link-Outter-Mobile:hover {
+  	background-color: #6b6e70; 
+  	filter: brightness(0.8);
+	border-radius: 5px;
+}
+
 .Portfolio-Link {
 	margin-top: 30px;
 	display: inline-block;
 	text-decoration: none;
+	color: #43B0EF;
+	font-size: 1.5rem;
+}
+
+.Portfolio-Link-Mobile {
+	display: inline-block;
 	color: #43B0EF;
 	font-size: 1.5rem;
 }
