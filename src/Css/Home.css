@@ -319,7 +319,7 @@ h1, h2, h3, h3, p {
 }
 
 .Mobile-Hamburger > img {
-  width: 30px;
+  width: 2rem;
 }
 
 .Heading-Link-Mobile-Menu {
@@ -327,6 +327,7 @@ h1, h2, h3, h3, p {
   align-items: flex-end;
   color: #43B0EF;
   padding: 5px;
+  font-size: 1.2rem;
 }
 
 .Mobile-Menu {
