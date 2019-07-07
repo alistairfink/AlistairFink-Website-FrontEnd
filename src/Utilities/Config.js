@@ -1,5 +1,5 @@
 module.exports = {
-	ApiEndPointRoot: "http://alistairfink.com/alistairfink/api",
+	ApiEndPointRoot: "https://alistairfink.com/alistairfink/api",
 	ApiEndPoints: {
 		About: "/about",
 		Education: "/education",
