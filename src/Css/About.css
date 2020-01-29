@@ -1,5 +1,5 @@
 .AboutOutter {
-	padding-left: 28vw;
+	padding-left: 22vw;
 	padding-right: 22vw;
 	background-color: transparent;
 	padding-top: 20vh;
@@ -31,17 +31,18 @@
 
 .About-Image-Img {
 	height: 20vh;
+	max-height: 300px;
 	border-radius: 360px;
 	margin-right: 50px;
 }
 
 .About-Image-Img-Mobile {
 	height: 60vw;
+	max-height: 300px;
 	border-radius: 360px;
 }
 
 .About-Title {
-	flex: 1;
 }
 
 .About-Title > h1 {
@@ -80,8 +81,9 @@
 
 .AboutDesc {
 	margin-top: 10px;
-	margin-left: 10px;
-	margin-right: 100px;
+	margin-left: 150px;
+	margin-right: 150px;
+	text-align: center;
 	color: #dadfe1;
 }
 
@@ -89,6 +91,7 @@
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
+	text-align: center;
 	color: #dadfe1;
 }
 
@@ -96,7 +99,7 @@
 	display: flex;
 	flex-direction: row;
 	margin-top: 10px;
-	justify-content: flex-start;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 

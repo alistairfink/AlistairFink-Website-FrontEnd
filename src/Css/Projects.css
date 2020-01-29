@@ -10,8 +10,8 @@
 
 .Projects-Title > h1 {
 	font-size: 4.5rem;
-	color: #A6CE28;	
-  	text-align: center;
+	color: #a6ce28;
+	text-align: center;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 	hyphens: auto;
@@ -47,8 +47,8 @@
 }
 
 .Project:hover {
-  	background-color: #6b6e70; 
-  	filter: brightness(0.8);
+	background-color: #6b6e70;
+	filter: brightness(0.8);
 	border-radius: 5px;
 }
 
@@ -86,8 +86,8 @@
 }
 
 .Project-Mobile:hover {
-  	background-color: #6b6e70; 
-  	filter: brightness(0.8);
+	background-color: #6b6e70;
+	filter: brightness(0.8);
 	border-radius: 5px;
 }
 
@@ -102,28 +102,28 @@
 	margin-bottom: 0px;
 }
 
+.Portfolio-Link-Real-Outer {
+	display: flex;
+	justify-content: center;
+}
+
 .Portfolio-Link-Outter {
-	margin-left: 10vw;
-	padding: 10px;
-	height: 1000px;
+	margin-top: 10px;
 }
 
 .Portfolio-Link-Outter:hover {
-  	background-color: #6b6e70; 
-  	filter: brightness(0.8);
+	background-color: #6b6e70;
+	filter: brightness(0.8);
 	border-radius: 5px;
 }
 
 .Portfolio-Link-Outter-Mobile {
 	margin-top: 10px;
-	display: flex;
-	justify-content: center;
-	text-decoration: none;
 }
 
 .Portfolio-Link-Outter-Mobile:hover {
-  	background-color: #6b6e70; 
-  	filter: brightness(0.8);
+	background-color: #6b6e70;
+	filter: brightness(0.8);
 	border-radius: 5px;
 }
 
@@ -131,13 +131,13 @@
 	margin-top: 30px;
 	display: inline-block;
 	text-decoration: none;
-	color: #43B0EF;
+	color: #43b0ef;
 	font-size: 1.5rem;
 }
 
 .Portfolio-Link-Mobile {
 	display: inline-block;
-	color: #43B0EF;
+	color: #43b0ef;
 	font-size: 1.5rem;
 }
 

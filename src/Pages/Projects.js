@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import "../Css/Shared.css";
 import "../Css/Projects.css";
 import RestClient from "../Utilities/RestClient.js";
-import Portfolio from "../Resources/Portfolio.png"
+import Portfolio from "../Resources/Portfolio.png";
 
 class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      FeaturedProjects: null,
+      FeaturedProjects: null
     };
     this.LoadProjects = this.LoadProjects.bind(this);
     this.LoadProjectsCallback = this.LoadProjectsCallback.bind(this);
@@ -35,21 +35,53 @@ class Projects extends React.Component {
           <h1>Projects</h1>
         </div>
         <div className="Featured-Outter">
-          {this.state.FeaturedProjects != null && this.state.FeaturedProjects.map((project, i) => 
-            <Link to={{pathname: "/portfolio/" + project.Uuid, backLocation: "/"}} key={i} style={{textDecorationLine: 'none'}}>
-              <div className="Project">
-                <img src={project.Thumbnail} alt={project.Name + " Thumbnail"}/>
-                <p>{project.Name}</p>
-              </div>
-            </Link>
-          )}
+          {this.state.FeaturedProjects != null &&
+            this.state.FeaturedProjects.map((project, i) => (
+              <Link
+                to={{
+                  pathname: "/portfolio/" + project.Uuid,
+                  backLocation: "/"
+                }}
+                key={i}
+                style={{ textDecorationLine: "none" }}
+              >
+                <div className="Project">
+                  <img
+                    src={project.Thumbnail}
+                    alt={project.Name + " Thumbnail"}
+                  />
+                  <p>{project.Name}</p>
+                </div>
+              </Link>
+            ))}
         </div>
-        <Link className={this.props.smallScreen ? "Portfolio-Link-Outter-Mobile" : "Portfolio-Link-Outter"} to="/portfolio">
-          {!this.props.smallScreen && <img className="Portfolio-Link-Outter-Image" src={Portfolio} alt="Portfolio"/> }
-          <div className={this.props.smallScreen ? "Portfolio-Link-Mobile" : "Portfolio-Link"}>
-            Click to View Full Portfolio
-          </div>
-        </Link>
+        <div className="Portfolio-Link-Real-Outer">
+          <Link
+            className={
+              this.props.smallScreen
+                ? "Portfolio-Link-Outter-Mobile"
+                : "Portfolio-Link-Outter"
+            }
+            to="/portfolio"
+          >
+            {!this.props.smallScreen && (
+              <img
+                className="Portfolio-Link-Outter-Image"
+                src={Portfolio}
+                alt="Portfolio"
+              />
+            )}
+            <div
+              className={
+                this.props.smallScreen
+                  ? "Portfolio-Link-Mobile"
+                  : "Portfolio-Link"
+              }
+            >
+              Click to View Full Portfolio
+            </div>
+          </Link>
+        </div>
       </div>
     );
   }
