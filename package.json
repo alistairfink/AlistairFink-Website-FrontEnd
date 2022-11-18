@@ -9,7 +9,7 @@
     "react-linkify": "^1.0.0-alpha",
     "react-router-dom": "^5.0.1",
     "react-router-hash-link": "^1.2.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-slick": "^0.24.0"
   },
   "scripts": {
